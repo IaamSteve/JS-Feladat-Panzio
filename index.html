@@ -1,56 +1,56 @@
-<DOCTYPE html>
-    <html lang="hu">
+<!DOCTYPE html>
+<html lang="hu">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Panzió - szobafoglalás</title>
-        <link rel="stylesheet" href="css/bootstrap.rtl.css">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panzió - szobafoglalás</title>
+    <link rel="stylesheet" href="css/bootstrap.rtl.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-    <body>
-        <form>
-            <div class="container">
-                <hr>
-                <p>
-                    <label for="start">Érkezés dátuma:</label>
-                </p>
-                <input type="date" id="start" name="trip-start" value="" min="2022-09-19" max="">
-                <label for="stop">Távozás dátuma:</label>
-                <input type="date" id="stop" name="trip-stop" value="" min="2022-09-19" max="2022-10-18">
-                <input type="text" id="difference" disabled>
-                <hr>
-                <p>Szoba típusa:
-                    <div class="form-check" id="Szoba1">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
+<body>
+    <form>
+        <div class="container">
+            <hr>
+            <p>
+                <label for="start">Érkezés dátuma:</label>
+            </p>
+            <input type="date" id="start" name="trip-start" value="" min="2022-09-27" max="2022-12-01">
+            <label for="stop">Távozás dátuma:</label>
+            <input type="date" id="stop" name="trip-stop" value="" min="2022-09-30" max="2022-12-31">
+            <hr>
+            <p>Szoba típusa:
+                <div class="form-check" id="Szoba1">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
                             Egyágyas - 9.000 Ft/éj
                         </label>
-                    </div>
-                    <div class="form-check" id="Szoba2">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                        <label class="form-check-label" for="flexRadioDefault2">
+                </div>
+                <div class="form-check" id="Szoba2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
                             Kétágyas - 15.000 Ft/éj
                         </label>
-                    </div>
-                    <div class="form-check" id="Szoba3">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
+                </div>
+                <div class="form-check" id="Szoba3">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
                             Kétágyas 1 pótággyal - 18.000 Ft/éj
                         </label>
-                    </div>
-                    <div class="form-check" id="Szob41">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        <label class="form-check-label" for="flexRadioDefault1">
+                </div>
+                <div class="form-check" id="Szob41">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
                             Kétágyas 2 pótággyal - 21.000 Ft/éj
                         </label>
-                    </div>
-                </p>
-                <hr>
-                <p>Vendégek száma:</p>
-                <select class="form-select" aria-label="Default select example" id="vendegek" style="width: 65px;">
+                </div>
+            </p>
+            <hr>
+            <p>Vendégek száma:</p>
+            <select class="form-select" aria-label="Default select example" id="vendegek" style="width: 65px;">
                     
                     <option selected value="0"></option>
                     <option value="1">1</option>
@@ -60,93 +60,94 @@
                     <option value="5">5</option>
                 </select>
 
-                <p>Vendégek életkora:</p>
-                <div class="container-fluid">
-                    <textarea name="VendegEletkor1" id="VElet1" cols="1" rows="1" style="width: 35px;"></textarea>
-                    <p>év</p>
-                </div>
+            <p>Vendégek életkora:</p>
+            <div class="container-fluid">
+                <textarea name="VendegEletkor1" id="VElet1" cols="1" rows="1" style="width: 35px;"></textarea>
+                <p>év</p>
+            </div>
 
-                <div class="container-fluid">
-                    <textarea name="VendegEletkor2" id="VElet2" cols="1" rows="1" style="width: 35px;"></textarea>
-                    <p>év</p>
-                </div>
+            <div class="container-fluid">
+                <textarea name="VendegEletkor2" id="VElet2" cols="1" rows="1" style="width: 35px;"></textarea>
+                <p>év</p>
+            </div>
 
-                <div class="container-fluid">
-                    <textarea name="VendegEletkor3" id="VElet3" cols="1" rows="1" style="width: 35px;"></textarea>
-                    <p>év</p>
-                </div>
+            <div class="container-fluid">
+                <textarea name="VendegEletkor3" id="VElet3" cols="1" rows="1" style="width: 35px;"></textarea>
+                <p>év</p>
+            </div>
 
-                <div class="container-fluid">
-                    <textarea name="VendegEletkor4" id="VElet4" cols="1" rows="1" style="width: 35px;"></textarea>
-                    <p>év</p>
-                </div>
+            <div class="container-fluid">
+                <textarea name="VendegEletkor4" id="VElet4" cols="1" rows="1" style="width: 35px;"></textarea>
+                <p>év</p>
+            </div>
 
 
-                <hr>
-                <p>Ellátás:</p>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
+            <hr>
+            <p>Ellátás:</p>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
                         Reggeli - 900 Ft/nap/fő
                     </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
-                    <label class="form-check-label" for="flexRadioDefault1">
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                <label class="form-check-label" for="flexRadioDefault1">
                         Félpanzió - 2.900 Ft/nap/fő
                     </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
                         Teljes panzió - 4.900 Ft/nap/fő
                     </label>
-                </div>
+            </div>
 
-                <hr>
-                <p>Fürdő szolgáltatások:</p>
-                <div class="form-check" style="text-align: right;" id="Furdo1">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
+            <hr>
+            <p>Fürdő szolgáltatások:</p>
+            <div class="form-check" style="text-align: right;" id="Furdo1">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
                       Beltéri medencék - 800 Ft/nap/fő
                     </label>
-                </div>
-                <div class="form-check" style="text-align: right;" id="Furdo2">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
+            </div>
+            <div class="form-check" style="text-align: right;" id="Furdo2">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
                       Kültéri medencék - 800 Ft/nap/fő
                     </label>
-                </div>
-                <div class="form-check" style="text-align: right;" id="Furdo3">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
+            </div>
+            <div class="form-check" style="text-align: right;" id="Furdo3">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
                       Szauna belépő - 800 Ft/nap/fő
                     </label>
-                </div>
-                <div class="form-check" style="text-align: right;" id="Furdo4">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                    <label class="form-check-label" for="flexCheckChecked">
+            </div>
+            <div class="form-check" style="text-align: right;" id="Furdo4">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label" for="flexCheckChecked">
                       Teljes belépő - 2.000 Ft/nap/fő
                     </label>
-                </div>
-                <hr>
-                <div class="form-control" id="Egyeb">
-                    Egyéb kérés, kívánság:
-                    <div class="form-floating">
-                        <textarea class="form-control" placeholder="Kívánságok" id="floatingTextarea"></textarea>
-                        <label for="floatingTextarea"></label>
-                    </div>
-                </div>
-                <hr>
-                <div style="text-align: center;">
-                    <button type="button" class="btn btn-primary" id="calculation">Költségkalkuláció</button>
+            </div>
+            <hr>
+            <div class="form-control" id="Egyeb">
+                Egyéb kérés, kívánság:
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Kívánságok" id="floatingTextarea"></textarea>
+                    <label for="floatingTextarea"></label>
                 </div>
             </div>
-        </form>
+            <hr>
+            <div style="text-align: center;">
+                <button type="button" class="btn btn-primary" id="calculation">Költségkalkuláció</button>
+            </div>
+        </div>
+    </form>
 
-        <script src="JS/jquery-3.6.1.min.js"></script>
-        <script src="JS/bootstrap.bundle.js"></script>
-        <script src="JS/script.js"></script>
-    </body>
+    <script src="JS/jquery-3.6.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="JS/bootstrap.bundle.js"></script>
+    <script src="JS/script.js"></script>
+</body>
 
-    </html>
+</html>

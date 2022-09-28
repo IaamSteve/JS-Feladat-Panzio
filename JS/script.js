@@ -1,3 +1,4 @@
+$(".selector").flatpickr(optional_config);
 let perfo = $('#vendegek'),
     sDate = $('#start'),
     eDate = $('#stop'),
@@ -29,9 +30,8 @@ function func() {
     var milli_secs = sDate.getTime() - eDate.getTime();
 
     // Convert the milli seconds to Days 
-    var days = milli_secs / (1000 * 3600 * 24);
-    document.getElementById("difference").innerHTML =
-        Math.round(Math.abs(days));
+    var days = Math.round(Math.abs(milli_secs / (1000 * 3600 * 24)));
+    console.log(days)
 }
 /*
 var d1 = new Date(); //az aktuális dátum
