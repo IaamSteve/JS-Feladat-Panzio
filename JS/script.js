@@ -1,10 +1,16 @@
-$(".selector").flatpickr(optional_config);
+/*
+import './flatpickr'
+import $ from 'jquery'
+*/
+
+
+$(".selector").flatpickr(optional_config)
 let perfo = $('#vendegek'),
     sDate = $('#start'),
     eDate = $('#stop'),
     szoba1 = $('#Szoba1'),
     szoba2 = $('#Szoba2'),
-    szoba3 = $('#Szoba3'),
+    // szoba3 = $('#Szoba3'),
     szoba4 = $('#Szoba4'),
     furdo1 = $('#Furdo1'),
     furdo2 = $('#Furdo2'),
@@ -16,21 +22,20 @@ var d1 = Date.getTime(),
     d2 = 
     */
 $(function() {
-    $("#sDate").datepicker();
-    var Enter = $("#sDate")
-});
-$(function() {
-    $("#eDate").datepicker();
-    var leave = $("#eDate")
-});
+    $('form').submit(function(event) {
+        let date1 = JSON.stringify($(this).serializeArray())
+        $('#message').text(date1)
+        event.preventDefault()
+    })
+})
 
 function func() {
-    sDate = new Date(date1.value);
-    eDate = new Date(date2.value);
-    var milli_secs = sDate.getTime() - eDate.getTime();
+    sDate = new Date(date1.value)
+    eDate = new Date(date2.value)
+    var milli_secs = sDate.getTime() - eDate.getTime()
 
     // Convert the milli seconds to Days 
-    var days = Math.round(Math.abs(milli_secs / (1000 * 3600 * 24)));
+    var days = Math.round(Math.abs(milli_secs / (1000 * 3600 * 24)))
     console.log(days)
 }
 /*

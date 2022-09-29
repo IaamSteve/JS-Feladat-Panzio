@@ -6,25 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panzió - szobafoglalás</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/bootstrap.rtl.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <css-doodle>
+        :doodle { @grid: 15 / 100vmax; background: #fff; cursor: pointer; } :doodle(:hover) { --s: 1 ; } :after { content: @pick(a,A); font-size: 4vmax; color: #000; transform: scale(@rand(.2, .9)); } transition: .5s cubic-bezier(.175, .885, .32, 1.275); transition-delay:
+        @rand(650ms); transform: translateY(calc(var(--s) * 100%)) rotate(calc(var(--s) * 360deg));
+
+
+
+    </css-doodle>
 </head>
 
 <body>
-    <form>
-        <div class="container">
+
+    <div class="container py-5">
+        <form>
+            <div class="container py-5">
+                <hr>
+                <div class="row py-3">
+                    <div class="input-group-append"></div>
+                    <input type="text" id="date1" name="trip-start" class="flatpickr js flatpickr dateTime" placeholder="Ettől">
+                    <input type="text" id="date2" name="trip-stop" class="flatpickr js flatpickr dateTime" placeholder="Eddig">
+
+                    <button type="submit" class="btn btn-info">Mentés</button>
+                </div>
+            </div>
             <hr>
-            <p>
-                <label for="start">Érkezés dátuma:</label>
-            </p>
-            <input type="date" id="start" name="trip-start" value="" min="2022-09-27" max="2022-12-01">
-            <label for="stop">Távozás dátuma:</label>
-            <input type="date" id="stop" name="trip-stop" value="" min="2022-09-30" max="2022-12-31">
-            <hr>
+
             <p>Szoba típusa:
+
                 <div class="form-check" id="Szoba1">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" class="flatpickr js flatpickr dateTime">
                     <label class="form-check-label" for="flexRadioDefault1">
                             Egyágyas - 9.000 Ft/éj
                         </label>
@@ -36,18 +50,20 @@
                         </label>
                 </div>
                 <div class="form-check" id="Szoba3">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                    <label class="form-check-label" for="flexRadioDefault3">
                             Kétágyas 1 pótággyal - 18.000 Ft/éj
                         </label>
                 </div>
                 <div class="form-check" id="Szob41">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+                    <label class="form-check-label" for="flexRadioDefault4">
                             Kétágyas 2 pótággyal - 21.000 Ft/éj
                         </label>
                 </div>
+
             </p>
+
             <hr>
             <p>Vendégek száma:</p>
             <select class="form-select" aria-label="Default select example" id="vendegek" style="width: 65px;">
@@ -141,9 +157,9 @@
             <div style="text-align: center;">
                 <button type="button" class="btn btn-primary" id="calculation">Költségkalkuláció</button>
             </div>
-        </div>
+    </div>
     </form>
-
+    </div>
     <script src="JS/jquery-3.6.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="JS/bootstrap.bundle.js"></script>
