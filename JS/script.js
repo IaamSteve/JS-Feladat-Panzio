@@ -31,8 +31,8 @@ function getDate1() {
 function DiffOfTime(){
     const diffTime = Math.abs(d2.value - d1.value);
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    console.log(diffTime + " milliseconds");
-    console.log(diffDays + " days");
+    console.log(diffTime.toString() + " milliseconds");
+    console.log(diffDays.toString() + " days");
     
 }
 
